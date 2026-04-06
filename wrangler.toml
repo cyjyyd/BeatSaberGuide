@@ -1,0 +1,17 @@
+# Cloudflare Pages 配置文件
+# 用于替代 wrangler.toml 的现代配置方式
+
+# 项目基本信息
+name = "beatsaber-guide"
+
+# 兼容性日期
+compatibility_date = "2024-01-01"
+
+# Pages 项目配置
+pages_build_output_dir = "_site"
+
+[build]
+command = "bundle exec jekyll build"
+
+[build.environment]
+RUBY_VERSION = "3.3.0"
