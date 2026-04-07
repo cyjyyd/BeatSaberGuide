@@ -31,7 +31,12 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
-          bundler-cache: true
+
+      - name: Add Linux platform support
+        run: bundle lock --add-platform ruby --add-platform x86_64-linux
+
+      - name: Install dependencies
+        run: bundle install
 
       - name: Setup Pages
         id: pages
