@@ -266,6 +266,8 @@ Beat Saber是一个挥砍音符的音乐游戏，要有人为歌曲摆放音符�
 点开歌曲可以查看详细介绍、各难度详情以及排行榜，下面是各难度详情的图标翻译：<br>
 找到歌曲后点击`Download`图标即可下载歌曲到本地。
 
+[并排]![下载歌曲](img/newbeatsaver_download.png)|![下载歌曲详情](img/newbeatsaver_download_f.png)[/并排]
+
 ### 使用PC添加歌曲压缩包 {#addsong_zipsong}
 
 [警告框]

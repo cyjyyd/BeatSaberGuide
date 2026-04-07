@@ -275,7 +275,7 @@ Beat Saber是一个挥砍音符的音乐游戏，要有人为歌曲摆放音符�
 
 在 [ModAssistant](#modinstall_assistant) 的 `选项` 界面中启用BeatSaver的一键添加后，重启浏览器，从 [BeatSaver](https://beatsaver.com/) 找到歌曲后点击 `One-Click` 图标即可一键添加歌曲到游戏中。
 
-![一键添加](img/newbeatsaver_oneclick.png)
+[并排]![一键添加](img/newbeatsaver_oneclick.png)|![一键添加详情](img/newbeatsaver_oneclick_f.png)[/并排]
 
 点击后会弹出OneClick窗口，可以在里面看到执行状态。
 
@@ -285,7 +285,7 @@ Beat Saber是一个挥砍音符的音乐游戏，要有人为歌曲摆放音符�
 
 ### 手动添加歌曲 {#addsong_zipsong}
 
-![下载歌曲](img/newbeatsaver_download.png)
+[并排]![下载歌曲](img/newbeatsaver_download.png)|![下载歌曲详情](img/newbeatsaver_download_f.png)[/并排]
 
 在 [BeatSaver](https://beatsaver.com/) 中点击 `Download` 图标即可下载，下载之后多选压缩包，右键 `解压每个压缩文件到单独的文件夹`。
 

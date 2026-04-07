@@ -304,7 +304,7 @@ Beat Saber是一个挥砍音符的音乐游戏，要有人为歌曲摆放音符�
 
 找到歌曲后点击 `Download` 图标即可下载歌曲到本地。
 
-![下载歌曲](img/newbeatsaver_download.png)
+[并排]![下载歌曲](img/newbeatsaver_download.png)|![下载歌曲详情](img/newbeatsaver_download_f.png)[/并排]
 
 ### 使用PC添加歌曲 {#addsong_songfolder}
 

@@ -26,7 +26,10 @@
       "Bash(\"pc-faq/drive.html\")",
       "Bash(sed 's|https://bs\\\\.wgzeyu\\\\.com/|/|g; s|href=\"\"/pc-guide/\"\"|href=\"\"../pc-guide/\"\"|g; s|href=\"\"/pc-faq/\"\"|href=\"\"../pc-faq/\"\"|g; s|href=\"\"/oq-guide/\"\"|href=\"\"../oq-guide/\"\"|g; s|href=\"\"/buy/\"\"|href=\"\"../buy/\"\"|g; s|href=\"\"/drive/\"\"|href=\"\"../drive/\"\"|g; s|href=\"\"/songs/\"\"|href=\"\"../songs/\"\"|g' \"old-archive/songs/index.html\")",
       "Bash(\"songs/index.html\")",
-      "Bash(node -e \":*)"
+      "Bash(node -e \":*)",
+      "Bash(bundle install:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:4000/)",
+      "Bash(curl -s http://127.0.0.1:4001/pc-guide/)"
     ]
   }
 }

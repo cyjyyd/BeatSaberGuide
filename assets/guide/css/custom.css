@@ -201,6 +201,8 @@
 }
 
 img {
+    max-width: 100%;
+    height: auto;
     image-rendering:-moz-crisp-edges;
     image-rendering:-o-crisp-edges;
     image-rendering:-webkit-optimize-contrast;
@@ -256,4 +258,182 @@ table > thead:first-child > tr:first-child > td {
 
 table > tbody + tbody {
     border-top: 2px solid #ddd;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 991px) {
+    /* Mobile toggle button - fixed at bottom right */
+    .docs-sidebar-toggle {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+        background: #0E97EE;
+        color: #fff;
+        border: none;
+        border-radius: 50px;
+        padding: 12px 20px;
+        font-size: 14px;
+        font-weight: 500;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .docs-sidebar-toggle:hover {
+        background: #0a7bc4;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+
+    .docs-sidebar-toggle.active {
+        background: #dc3545;
+    }
+
+    .docs-sidebar-toggle i {
+        font-size: 16px;
+    }
+
+    /* Overlay for mobile - real DOM element */
+    .docs-sidebar-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0);
+        z-index: 998;
+        pointer-events: none;
+        transition: background 0.3s ease;
+    }
+
+    .docs-sidebar-overlay.visible {
+        background: rgba(0,0,0,0.4);
+        pointer-events: auto;
+        cursor: pointer;
+    }
+
+    /* Sidebar as slide-out drawer on mobile */
+    .docs-sidebar {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -280px;
+        width: 280px;
+        height: 100vh;
+        background: #fff;
+        z-index: 1000;
+        overflow-y: auto;
+        box-shadow: none;
+        transition: left 0.3s ease;
+        margin: 0;
+        padding: 20px 15px;
+        border-right: 1px solid #eee;
+    }
+
+    .docs-sidebar.mobile-open {
+        left: 0;
+        box-shadow: 4px 0 20px rgba(0,0,0,0.15);
+    }
+
+    /* Sidebar navigation on mobile */
+    .docs-sidebar .nav {
+        margin: 0;
+    }
+
+    .docs-sidebar .nav > li > a {
+        padding: 12px 15px;
+        border-left: 3px solid transparent;
+    }
+
+    .docs-sidebar .nav .nav > li > a {
+        padding-left: 30px;
+    }
+
+    /* Make content full width on mobile */
+    .col-md-9 {
+        width: 100%;
+        padding: 0 15px;
+    }
+    /* Reduce heading padding on mobile */
+    .section.docs-heading {
+        padding: 30px 0;
+    }
+    /* Smaller title on mobile */
+    .big-title h1 {
+        font-size: 28px;
+    }
+}
+
+/* Hide toggle button and overlay on desktop */
+@media (min-width: 992px) {
+    .docs-sidebar-toggle {
+        display: none !important;
+    }
+    .docs-sidebar-overlay {
+        display: none !important;
+    }
+    .docs-sidebar {
+        display: block;
+    }
+}
+
+/* Smaller devices */
+@media (max-width: 767px) {
+    .big-title h1 {
+        font-size: 24px;
+    }
+    .lead {
+        font-size: 14px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+    p {
+        font-size: 15px;
+    }
+}
+
+/* Section heading with divider line (matching original dark-text hr style) */
+.col-md-9 h2 {
+    font-size: 29px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #242424;
+    position: relative;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+}
+
+.col-md-9 h2::after {
+    content: '';
+    display: block;
+    width: 130px;
+    height: 1px;
+    background-color: #030303;
+    margin-top: 15px;
+    margin-left: 0;
+}
+
+/* h4 heading with top border as separator */
+.col-md-9 h4 {
+    font-size: 21px;
+    font-weight: bold;
+    color: #242424;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+/* Add separator before warning boxes */
+.col-md-9 .intro2 {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
 }
